@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Mikan MiniDE Desktop"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "Klash Development"
 #define MyAppURL "https://github.com/klash-development/Mikan-Desktop"
 #define MyAppExeName "Mikan MiniDE.exe"
@@ -42,8 +42,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "K:\Projects\VS Projects\Mikan MiniDE\final\Mikan MiniDE V1.0.0\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "K:\Projects\VS Projects\Mikan MiniDE\final\Mikan MiniDE V1.0.0\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "K:\Projects\VS Projects\Mikan MiniDE\Mikan MiniDE\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "K:\Projects\VS Projects\Mikan MiniDE\Mikan MiniDE\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
