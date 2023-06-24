@@ -1,0 +1,18 @@
+﻿<Window x:Class="Mikan_MiniDE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mikan_MiniDE"
+        xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:cef="clr-namespace:CefSharp;assembly=CefSharp.Core"
+        mc:Ignorable="d"
+        Title="Mikan MiniDE" Height="700" Width="900" WindowStyle="None" Background="#333" ResizeMode="NoResize">
+    <Grid MouseDown="Grid_MouseDown">
+        <wpf:ChromiumWebBrowser x:Name="mikan" Margin="0,25,0,0" Address="http://mika.fly.dev"/>
+        <Label Content="Mikan MiniDE | Mika Scripting Solutions by KlashDevelopment" HorizontalAlignment="Left" Margin="0,-3,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei UI" FontSize="16" Foreground="White"/>
+        <Button x:Name="exit" Content="X" VerticalAlignment="Top" Height="25" BorderThickness="0" FontFamily="Segoe UI Black" HorizontalAlignment="Right" Width="26" Click="exit_Click"/>
+        <Button x:Name="minimize" Content="-" VerticalAlignment="Top" Height="25" BorderThickness="0" FontFamily="Segoe UI Black" HorizontalAlignment="Right" Width="26" Click="minimize_Click" Margin="0,0,26,0"/>
+        <Button x:Name="maximize" Content="+" Margin="0,0,52,0" VerticalAlignment="Top" Height="25" BorderThickness="0" FontFamily="Segoe UI Black" HorizontalAlignment="Right" Width="26" Click="maximize_Click"/>
+    </Grid>
+</Window>
