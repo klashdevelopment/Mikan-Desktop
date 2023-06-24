@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -43,6 +44,14 @@ namespace Mikan_MiniDE
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void loading_Click(object sender, RoutedEventArgs e)
+        {
+            loading.Visibility = Visibility.Hidden;
+            loadingText.Visibility = Visibility.Visible;
+            Thread.Sleep(300); // aestetic purposes
+            mikan.Visibility = Visibility.Visible;
         }
     }
 }

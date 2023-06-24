@@ -9,8 +9,22 @@
         mc:Ignorable="d"
         Title="Mikan MiniDE" Height="700" Width="900" WindowStyle="None" Background="#333" ResizeMode="NoResize">
     <Grid MouseDown="Grid_MouseDown">
-        <wpf:ChromiumWebBrowser x:Name="mikan" Margin="0,25,0,0" Address="http://mika.fly.dev"/>
-        <Label Content="Mikan MiniDE | Mika Scripting Solutions by KlashDevelopment" HorizontalAlignment="Left" Margin="0,-3,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei UI" FontSize="16" Foreground="White"/>
+        <Button Click="loading_Click" Cursor="Hand" x:Name="loading" Content="Start Mikan" Margin="0,314,0,312" RenderTransformOrigin="0.5,0.5" FontFamily="Malgun Gothic" FontSize="32" FontWeight="Medium" Background="#FF080808" Foreground="White" HorizontalAlignment="Center" Padding="25,15,25,15" BorderBrush="White" BorderThickness="2" Width="245">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="loadingText" Visibility="Hidden" Content="Loading Mikan MiniDE" Margin="0,314,0,312" RenderTransformOrigin="0.5,0.5" FontFamily="Malgun Gothic" FontSize="32" FontWeight="Medium" Background="#FF080808" Foreground="White" HorizontalAlignment="Center" Padding="25,15,25,15" BorderBrush="White" BorderThickness="2">
+            <Label.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <wpf:ChromiumWebBrowser Visibility="Hidden" x:Name="mikan" Margin="0,25,0,0" Address="http://mika.fly.dev"/>
+        <Label x:Name="title" Content="Mikan MiniDE | Mika Scripting Solutions by KlashDevelopment" HorizontalAlignment="Left" Margin="0,-3,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei UI Light" FontSize="16" Foreground="White"/>
         <Button x:Name="exit" Content="X" VerticalAlignment="Top" Height="25" BorderThickness="0" FontFamily="Segoe UI Black" HorizontalAlignment="Right" Width="26" Click="exit_Click"/>
         <Button x:Name="minimize" Content="-" VerticalAlignment="Top" Height="25" BorderThickness="0" FontFamily="Segoe UI Black" HorizontalAlignment="Right" Width="26" Click="minimize_Click" Margin="0,0,26,0"/>
         <Button x:Name="maximize" Content="+" Margin="0,0,52,0" VerticalAlignment="Top" Height="25" BorderThickness="0" FontFamily="Segoe UI Black" HorizontalAlignment="Right" Width="26" Click="maximize_Click"/>
